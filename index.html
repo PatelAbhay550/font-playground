@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style id="custom-font-styles"></style>
+    <title>Font Playground</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Font Playground</h1>
+      <div class="font-search">
+        <label for="font-search-input">Search for a font:</label>
+        <input
+          type="text"
+          id="font-search-input"
+          placeholder="Enter font name"
+          list="font-suggestions"
+          oninput="updateSuggestions(this.value)"
+          onkeydown="handleKeyPress(event)"
+        />
+        <datalist id="font-suggestions"></datalist>
+        <button onclick="searchFont()">Search</button>
+        <input
+          type="file"
+          id="font-upload"
+          accept=".woff, .woff2, .ttf"
+          onchange="uploadFont(event)"
+        />
+      </div>
+      <div class="font-list" id="font-list"></div>
+    </div>
+
+    <div class="sections">
+      <div class="section" id="section1">Section 1</div>
+      <div class="section pricing-section" id="section2">
+        <div class="pricing-card">
+          <h2>Beginner</h2>
+          <p>No worries it's absolutely free</p>
+          <p class="price">$9.99/month</p>
+        </div>
+        <div class="pricing-card big">
+          <h2>Pro</h2>
+          <p>Great for professionals</p>
+          <p>Loved by Everyone</p>
+          <p class="price main">$19.99/month</p>
+        </div>
+        <div class="pricing-card">
+          <h2>Advance</h2>
+          <p>For power users</p>
+          <p class="price">$29.99/month</p>
+        </div>
+      </div>
+      <div class="section" id="section3">Section 3</div>
+      <div class="section" id="section4">Section 4</div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
